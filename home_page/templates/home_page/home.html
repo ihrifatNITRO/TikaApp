@@ -1,0 +1,120 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% bootstrap_messages %}
+    {% load bootstrap_icons %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Home Page</title>
+</head>
+<body>
+    <!-- 1st container -->
+    <div class="position-relative">
+        <div class="container">
+            <div class="row mt-1 ms-3">
+                <div class="col-12 mt-4">
+                    <pre class="webname mb-0">    Vaccination Management</pre>
+                    <p class="inspiration">
+                        <pre class="inspiration ms-2">        Don't hesitate, vaccinate - it's a shot worth taking for a healthy life's making.</pre>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute top-0 ms-5">
+            <img
+                src="{% static 'Tika_Logo.jpeg' %}"
+                height= 105
+                width= 105
+                class="rounded-circle mt-3"
+                alt="logo"/>
+        </div>
+    </div>
+
+    <!-- 2nd container -->
+    <div class="container-flex mt-3"> 
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-7">
+                <img
+                    class="rounded-3"
+                    src="{% static 'TikaTaking1.png' %}"
+                    width= 800
+                    alt="Tika Taking Logo"/>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2">
+                <!-- Login button -->
+                <a href="{% url 'login' %}">
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Login</span>
+                    </button>
+                </a>
+                <!-- Register button -->
+                <a href="{% url 'register' %}">
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Register</span>
+                    </button>
+                </a>
+                <!-- FAQ button -->
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">FAQ</span>
+                </button>
+                <!-- Certifications button -->
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Certification</span>
+                </button>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3rd container -->
+    <div class="bg-dark mt-3">
+        <div class="row">
+            <div class="col-3 text-white">
+                <p>©{% now "Y" %} website project name</p>
+                <p>Developed by: <br> Team Name</p>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-2 text-white">
+                <p>Find Us</p>
+                <div style="display: flex; justify-content: space-between;">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        {% bs_icon 'facebook' %}
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        {% bs_icon 'instagram' %}
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank">
+                        {% bs_icon 'twitter' %}
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        {% bs_icon 'linkedin' %}
+                    </a>
+                </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

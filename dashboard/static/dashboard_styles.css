@@ -1,0 +1,52 @@
+body{
+    background-image: radial-gradient(#eeeeee 2px, transparent 2px), radial-gradient(#eeeeee 2px, transparent 2px);
+    background-size: 27px 27px;
+    background-position: 0 0, 13.5px 13.5px;
+    background-color: #deebec;
+}
+
+.fixed-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    /* Adjust the width as needed */
+    background-image: radial-gradient(#ffffff 1px, transparent 1.5px);
+    background-size: 29px 29px;
+    background-color: #a8ff66;
+    /* Background color for the fixed part */
+    padding: 20px;
+    /* Add padding to create some space around the form */
+    border-left: 1px solid #ddd;
+    /* Add a border for separation */
+    height: 100%;
+    /* Make it full height */
+    overflow-y: auto;
+    /* Add vertical scroll if content overflows */
+    margin-left: 100%;
+    /* Move it off the screen */
+    color: rebeccapurple;
+}
+
+/* Style for the form within the fixed container */
+.fixed-container form {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #af4caf;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.btn:hover {
+    background-color: rgb(255, 0, 0);
+}
+
